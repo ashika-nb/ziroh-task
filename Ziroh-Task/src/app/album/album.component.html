@@ -1,0 +1,11 @@
+<p *ngIf="photos.length==0">Loading...</p>
+<div class="albums" *ngIf="photos.length>0">
+    <h1>Album{{id}}</h1>
+    <div class="d-flex">
+        <div *ngFor="let photo of photos" class='photo'>
+            <button (click)="deletePhoto(photo.id)"> Delete</button>
+            <img src="{{photo.url}}" alt="">
+        </div>
+    </div>
+
+</div>

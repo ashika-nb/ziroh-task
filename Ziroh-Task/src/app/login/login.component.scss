@@ -1,0 +1,45 @@
+.login-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 10px 10px 30px 5px #aaaaaa;
+    h4{
+        text-align: center;
+    }
+    .form-group{
+        margin: 20px;
+        flex-direction: column;
+        input{
+            height: 30px;
+            width: 250px;
+            padding: 5px;
+            margin-top: 5px;
+            &.is-invalid{
+                color: 1px solid red;
+            }
+        }
+        button{
+            padding: 5px;
+            height:40px;
+            margin-top:10px;
+            border:none;
+            background-color: #0548d3;
+            color: #fff;
+            cursor: pointer;
+        }
+        .invalid-input{
+           color: red;
+           
+        }
+        
+    }
+
+  }
+
+  .d-flex{
+      display:flex;
+  }

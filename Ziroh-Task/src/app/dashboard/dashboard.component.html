@@ -1,0 +1,8 @@
+
+
+
+<div class="album-display" infinite-scroll (scrolled)="onScrollDown($event)"  [scrollWindow]="false">
+    <div *ngFor="let id of albumsIds" class="album">
+        <app-album [id]="id"></app-album>
+    </div>
+</div>

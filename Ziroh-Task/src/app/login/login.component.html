@@ -1,0 +1,30 @@
+<div>
+    <div class="login-form">
+        <h4>LOGIN</h4>
+        <form [formGroup]="form" (ngSubmit)="onSubmit(); ">
+            <div class="form-group d-flex">
+                <label>Email ID</label>
+                <input formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" type="text">
+                <div *ngIf="submitted && f.email.errors" class="invalid-input">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.email">Email is invalid</div>
+                </div>
+            </div>
+            <div class="form-group d-flex">
+                <label>Password</label>
+                <input formControlName="password" type="password"
+                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                <div *ngIf="submitted && f.password.errors" class="invalid-input">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                    <div *ngIf="f.password.errors.minlength">
+                        Password must be at least 6 characters
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group d-flex">
+                <button type="submit">Log In</button>
+            </div>
+        </form>
+    </div>
+</div>
